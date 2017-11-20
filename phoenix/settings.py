@@ -25,7 +25,7 @@ SECRET_KEY = 'd_r2(d$ltu^$&bpbe&l%r&@%c8cjmr0133o50s2o=xavxn-20@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 DATE_INPUT_FORMATS = ('%Y-%m-%d %H:%M:%S')
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
