@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="utf-8">
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="col-md8">
+<div class="container">
+
+  <div class="jumbotron">
+    <h1 class="display-3">Publicaciones</h1>
+    <p class="lead">Ultimas publicaciones compartidas por los engargados de departamento</p>
+  </div>
+  <!-- Actividades CDN -->
+  <div class="jumbotron">
+    <h1 class="display-3">Fiesta Halloween</h1>
+    <p class="lead">Ayuda a repartir comida en la actividad de halloween de la UVG</p>
+    <hr class="my-4">
+    <p>Recompensa : 5 horas
+       Fecha/Lugar : Plaza; 31/10/17 ; 7:00 pm
+    </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Inscribete</a>
+    </p>
+  </div>
+
+  {% for post in posts  %}
+  <!-- Actividades CDN -->
+  <div class="jumbotron">
+    <h1 class="display-3">{{post.post}}</h1>
+    <p class="lead">Publicado por {{post.user}}</p>
+    <hr class="my-4">
+    <p>Recompensa: {{post.canthoras}}
+       Fecha/Lugar: {{post.fecha}}
+       Descripcion: {{post.descripcion}}
+    </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Inscribete</a>
+    </p>
+  </div>
+
+{% endfor %}
+</div>
+</div>
+{% endblock %}

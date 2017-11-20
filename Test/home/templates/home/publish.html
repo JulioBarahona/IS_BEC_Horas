@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="utf-8">
+<title>Publish</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Publica!</h1>
+    <p class="lead">Permite que los estudiantes obtengan nuevas oportunidades de realizar sus horas</p>
+  </div>
+  <!-- Actividades CDN -->
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="button">Publicar</button>
+  </form>
+    </div>
+{% endblock %}
