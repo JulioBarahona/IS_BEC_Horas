@@ -6,6 +6,6 @@ class Organizer(models.Model):
 	FirstName = models.CharField(max_length = 200)
 	LastName = models.CharField(max_length = 200)
 	email = models.EmailField()
-	password = ff.EncryptedCharField(max_length = 200)
+	password = models.CharField(max_length = 200)
 	def __str__(self):
 		return self.UserName

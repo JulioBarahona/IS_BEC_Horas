@@ -9,8 +9,9 @@ Major_Choices = (
 	('Programming','Programming')
 )
 class Student(models.Model):
+	search_fields = ["ID", "password"]
 	ID = models.CharField(max_length = 200,unique=True)
-	password = ff.EncryptedCharField(max_length = 200)
+	password = models.CharField(max_length = 200)
 	Name = models.CharField(max_length = 200)
 	LastName = models.CharField(max_length = 200)
 	email = models.EmailField()
