@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="utf-8">
+<title>Perfil</title>
+{% endblock %}
+{% block body %}
+
+  <!-- Mensaje Principal  -->
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">
+<!--<img src="{{ user.userprofile.image.url }}" width="100" alt="">-->
+        Perfil de {{user.first_name}} {{user.last_name}}</h1>
+      <p class="lead">Encuentra la información general de tu perfil aqui!</p>
+    <hr class="my-4">
+    <h2>Horas de Beca Realizadas:   {{user.userprofile.horasdebeca}} horas </h2>
+</div>
+      <!-- Datos Usuario  -->
+
+    <p>Nombre: {{user.first_name}}</p>
+    <p>Apellido: {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Carrera: {{user.userprofile.carrera}}</p>
+    <br>
+    <p>Descripcion/Bio: {{user.userprofile.description}}</p>
+    <br>
+    <p>Actividades Inscritas: </p>
+    {% for post in posts %}
+    {{post.post}}
+    {% endfor %}
+    <p>Actividades Realizadas: </p>
+
+  </div>
+  {% endblock %}

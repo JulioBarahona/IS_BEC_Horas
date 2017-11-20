@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+<meta charset="utf-8">
+<title>Registro</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Regístrate</h1>
+    <p class="lead">Regístrate para poder ver las ultimas actividades con relacion a horas de beca</p>
+  </div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-dark" >Registrar</button>
+  </form>
+</div>
+{% endblock %}

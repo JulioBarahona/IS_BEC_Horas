@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="utf-8">
+<title>Editar Perfil</title>
+{% endblock %}
+{% block body %}
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Edita tu Perfil</h1>
+      <p class="lead">Información Erronea? Actualiza los datos de tu perfil.</p>
+    </div>
+    <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+        <button type="submit" class="btn btn-dark">Editar</button>
+    </form>
+</div>
+{% endblock %}
